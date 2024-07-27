@@ -6,13 +6,9 @@ WORKDIR /code
 # 
 COPY ./requirements.txt /code/requirements.txt
 
-RUN apt-get update
+RUN apt-get install python3-pip python3-venv
 
-RUN apt-get upgrade -y
-
-RUN apt-get install python-pip python-venv
-
-RUN python -m venv venv
+RUN python3 -m venv venv
 
 RUN source venv/bin/activate
 
