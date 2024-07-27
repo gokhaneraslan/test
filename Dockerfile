@@ -6,7 +6,6 @@ WORKDIR /code
 # 
 COPY ./requirements.txt /code/requirements.txt
 
-RUN apt-get install python3-pip python3-venv
 
 RUN python3 -m venv venv
 
